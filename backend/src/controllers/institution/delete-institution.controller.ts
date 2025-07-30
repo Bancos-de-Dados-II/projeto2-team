@@ -4,7 +4,7 @@ import { deleteInstitutionService } from "../../services/instituicao/delete-inst
 export const deleteInstitutionController = async (req: Request, res: Response) => {
     try {
         const { id } = req.params;
-        await deleteInstitutionService(Number(id));
+        await deleteInstitutionService(id);
         res.status(200).json({ message: "Instituição deletada com sucesso!" });
         return;
 

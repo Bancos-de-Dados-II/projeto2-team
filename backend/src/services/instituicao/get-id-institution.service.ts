@@ -1,8 +1,8 @@
 import prisma from "../../prisma/client";
-import { Institution } from "../../@types/instituicao";
+import { getInstitution } from "../../@types/instituicao";
 import { ObjectId } from "bson";
 
-export async function getIdInstitutionService(id: string): Promise<Institution | null> {
+export async function getIdInstitutionService(id: string): Promise<getInstitution | null> {
   try {
     const objectId = new ObjectId(id);
 

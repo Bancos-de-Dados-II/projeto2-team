@@ -4,7 +4,7 @@ import { getIdInstitutionService } from "../../services/instituicao/get-id-insti
 export const getIdInstitutionController = async (req: Request, res: Response) => {
     try{
         const { id } = req.params;
-        const institution = await getIdInstitutionService(Number(id));
+        const institution = await getIdInstitutionService(id);
         res.status(200).json(institution);
         return;
     }
