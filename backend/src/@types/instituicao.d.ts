@@ -7,7 +7,7 @@ export interface Institution {
   positionY: number;
 }
 
-export interface getInstitution {
+export interface InstitutionGet {
   id: string;
   name: string;
   cnpj: string;
