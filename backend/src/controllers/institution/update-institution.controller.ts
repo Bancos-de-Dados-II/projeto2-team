@@ -7,7 +7,7 @@ export const updateInstitutionController = async (
 ) => {
   try {
     const { id } = req.params;
-    const { name, cnpj, contact, description, positionX, positionY } = req.body;
+    const { name, contact, description, positionX, positionY } = req.body;
 
     if (
       !id ||
@@ -20,9 +20,8 @@ export const updateInstitutionController = async (
       res.status(400).json({ error: "Preencha todos os campos" });
       return;
     }
-    await updateInstitutionService(Number(id), {
+    await updateInstitutionService(id, {
       name,
-      cnpj: cnpj || undefined, // CNPJ is optional
       contact,
       description,
       positionX,

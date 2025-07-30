@@ -10,7 +10,7 @@ export const validateId = async ( req: Request, res: Response, next: NextFunctio
     }
 
     const institution = await prisma.instituicao.findUnique({
-      where: { id: Number(id) },
+      where: { id: id },
     });
 
     if (!institution) {

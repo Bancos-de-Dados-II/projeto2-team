@@ -9,7 +9,7 @@ export const updateLocalizationInstitutionController = async (req: Request, res:
             res.status(400).json({ error: "Preencha todos os campos" });
             return;
         }
-        await updateLocalizationInstitutionService(Number(id), positionX, positionY);
+        await updateLocalizationInstitutionService(id, positionX, positionY);
         res.status(200).json({ message: "Localização da instituição atualizada com sucesso" });
         return;
     } catch (error) {
